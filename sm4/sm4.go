@@ -65,6 +65,7 @@ var fK = [4]uint32{
 type KeySizeError int
 
 func (k KeySizeError) Error() string {
+	
 	return "sm4: invalid key size " + strconv.Itoa(int(k))
 }
 
