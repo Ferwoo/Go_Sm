@@ -31,12 +31,12 @@ type P256V1Curve struct {
 	*elliptic.CurveParams
 	A *big.Int
 }
-
+//公钥
 type PublicKey struct {
 	X, Y  *big.Int
 	Curve P256V1Curve
 }
-
+//私钥
 type PrivateKey struct {
 	D     *big.Int
 	Curve P256V1Curve
@@ -51,7 +51,7 @@ type sm2Cipher struct {
 	C3 []byte
 	C2 []byte
 }
-
+//初始化
 func init() {
 	initSm2P256V1()
 }
