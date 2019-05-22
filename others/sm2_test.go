@@ -114,6 +114,7 @@ func TestSm2(t *testing.T) {
 	} else {
 		fmt.Printf("CheckSignature ok\n")
 	}
+	//测试
 	testExtKeyUsage := []ExtKeyUsage{ExtKeyUsageClientAuth, ExtKeyUsageServerAuth}
 	testUnknownExtKeyUsage := []asn1.ObjectIdentifier{[]int{1, 2, 3}, []int{2, 59, 1}}
 	extraExtensionData := []byte("extra extension")
