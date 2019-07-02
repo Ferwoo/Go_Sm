@@ -206,11 +206,11 @@ func BenchmarkSM2(t *testing.B) {
 			log.Fatal(err)
 		}
 		msg := []byte("test")
-		sign, err := priv.Sign(rand.Reader, msg, nil) // 签名
+		sign, err := priv.Sign(rand.Reader, msg, nil) // 进行签名
 		if err != nil {
 			log.Fatal(err)
 		}
-		ok := priv.Verify(msg, sign) // 密钥验证
+		ok := priv.Verify(msg, sign) // 密钥进行验证
 		if ok != true {
 			fmt.Printf("Verify error\n")
 		} else {
